@@ -47,11 +47,11 @@ public class ProdutoBean implements java.io.Serializable, Comparable<ProdutoBean
 	}
 	
 	public ProdutoBean () {
-		codigo = new String();
-		nome = new String();
-	    descricao = new String();
+		codigo = "";
+		nome = "";
+		descricao = "";
 		valor = 0.0;
-		estado = new String();
+		estado = "";
 	}
 	
 	
@@ -68,12 +68,12 @@ public class ProdutoBean implements java.io.Serializable, Comparable<ProdutoBean
 	public int compareTo(ProdutoBean p) {
 		if (valor > p.getValor()) {
 			return 1;
-		} else if (valor > p.getValor()) {
+		} else if (valor < p.getValor()) {
 			return -1;
-		} else
+		}
 		    return 0;
 	}
-	
-	
+
+
 
 }
